@@ -16,7 +16,9 @@
 	      <ul class="nav navbar-nav">
 	        <li><a href="/">Inicio</a></li>
 	        <li><a href="/Sobre">Sobre</a></li>
+	        {{#if currentUser}}
 	        <li><a href="/Feed">Feed</a></li>
+	        {{/if}}
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li>{{> atNavButton}}</li>
