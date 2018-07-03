@@ -1,0 +1,19 @@
+<template name="Perfil">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">	
+				{{#with perfil}}
+					<h1>{{username}}</h1>
+					<h4>{{profile.name}}</h4>
+				{{/with}}
+			</div>
+			<div class="col-md-7">
+				<h3>POSTS</h3>
+				{{# each posts}}
+					{{> Post}}
+				{{/each}}
+			</div>
+		</div>
+	</div>	
+</template>
+
