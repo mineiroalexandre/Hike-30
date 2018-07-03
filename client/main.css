@@ -1,3 +1,7 @@
+body {
+	background-color: #f4f4f4;
+}
+
 .tt-query,
 .tt-hint {
   width: 396px;
