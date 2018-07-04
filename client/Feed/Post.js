@@ -9,7 +9,6 @@ Template.Post.helpers({
 	},
 	usuarioCurtiu: function() {
 		let curtidas = this.curtidas;
-
 		let posicao = curtidas.indexOf(Meteor.userId());
 
 		if(posicao === -1) {
