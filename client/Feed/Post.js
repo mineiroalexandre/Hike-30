@@ -19,6 +19,15 @@ Template.Post.helpers({
 	},
 	comentarios: function() {
 		return Comentarios.find({post: this._id}).fetch();
+	},
+	autorDoPost: function() {
+		let idDoAutor = this.idDoAutor;
+		if(idDoAutor === Meteor.userId()) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 });
 
@@ -30,5 +39,8 @@ Template.Post.events({
 	"click .dislike-button": function(event, template) {
 		Meteor.call("descurtirPost", template.data._id);
 
+	},
+	"click .remove-button": function(event,template) {
+		Meteor.call("removePost", template.data._id);
 	}
 });

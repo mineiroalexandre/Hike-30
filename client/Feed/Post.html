@@ -13,9 +13,13 @@
 
 		<div class="panel-body">
 			{{#if usuarioCurtiu}}
-				<button class="btn btn-default dislike-button">Descurtir</button>
+				<i class="fa fa-heart dislike-button" role="button"></i>
 			{{else}}
-				<button class="btn btn-default like-button">Curtir</button>
+				<i class="fa fa-heart-o like-button" role="button"></i>
+			{{/if}}
+
+			{{#if autorDoPost}}
+				<i class="fa fa-trash pull-right remove-button" role="button"></i>
 			{{/if}}
 
 			<div>{{numeroDeCurtidas}}  Curtidas</div>

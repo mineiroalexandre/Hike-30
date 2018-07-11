@@ -60,3 +60,7 @@ body {
 .tt-suggestion p {
   margin: 0;
 }
+
+.fa {
+  font-size: 27px;
+}
