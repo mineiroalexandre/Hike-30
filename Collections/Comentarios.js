@@ -7,7 +7,7 @@ Meteor.methods({
 				texto: textoDoComentario,
 				post: idDoPost,
 				autor: Meteor.userId()
-		});
+			});
 		}
 	}
 });
