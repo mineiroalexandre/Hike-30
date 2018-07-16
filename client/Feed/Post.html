@@ -1,15 +1,15 @@
 <template name="Post">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h3 class="panel-title">{{usernameDoAutor}}</h3>
+			<a class="link-perfil" href="/perfis/{{idDoAutor}}"><h3 class="panel-title">{{usernameDoAutor}}</h3></a>
 		</div>
 		<div class="panel-body">
 			<div>{{texto}}</div>
-			</div>
+		</div>
 			
-			<div class="panel-body">
-				<img src="{{imagem}}" class="img-responsive">
-			</div>
+		<div class="panel-body">
+			<img src="{{imagem}}" class="img-responsive">
+		</div>
 
 		<div class="panel-body">
 			{{#if usuarioCurtiu}}

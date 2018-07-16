@@ -1,3 +1,5 @@
+Meteor.subscribe("posts");
+
 Template.Perfil.helpers({
 	perfil: function() {
 		let idDoUsuario = FlowRouter.getParam("id");
@@ -8,6 +10,7 @@ Template.Perfil.helpers({
 	posts: function() {
 		let idDoUsuario = FlowRouter.getParam("id");
 		let postsDoPerfil = Posts.find({idDoAutor: idDoUsuario}).fetch().reverse();
+
 		return postsDoPerfil;
 	},
 	usuarioSegue: function() {
@@ -16,21 +19,20 @@ Template.Perfil.helpers({
 		let seguidores = usuario.profile.seguidores;
 			
 		let posicao = seguidores.indexOf(Meteor.userId());
-
 			if(posicao === -1) {
 				return false;
 			} else {
 				return true;
 			}
-		},
-		seuPerfil: function() {
-			let idDoUsuario = FlowRouter.getParam("id");
+	},
+	seuPerfil: function() {
+		let idDoUsuario = FlowRouter.getParam("id");
 			if(idDoUsuario === Meteor.userId()) {
 				return true;
 			} else {
 				return false;
 			}
-		}
+	}
 });
 
 Template.Perfil.events({

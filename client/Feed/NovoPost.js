@@ -8,9 +8,6 @@ Template.NovoPost.events({
 		let textoDoFormulario = event.target.texto.value;
 		let urlDaImagem = template.urlDaImagem.get()
 
-		console.log(textoDoFormulario);
-		console.log(urlDaImagem);
-
 		Meteor.call("inserirPost", textoDoFormulario, urlDaImagem);
 		
 		event.target.texto.value = "";

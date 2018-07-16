@@ -6,8 +6,8 @@
 					<h1>{{username}}</h1>
 					<h4>{{profile.name}}</h4>
 
-					<p>{{profile.seguidores.length}} seguidores</p>
-					<p>{{profile.seguindo.length}} seguindo</p>
+					<div>{{profile.seguidores.length}} seguidores</div>
+					<div>{{profile.seguindo.length}} seguindo</div>
 				{{/with}}
 
 				{{#if seuPerfil}}
@@ -20,7 +20,6 @@
 						<button class="btn btn-success follow">Seguir</button>
 					{{/if}}
 				{{/if}}	
-
 			</div>
 			<div class="col-md-7">
 				<h3>POSTS</h3>
