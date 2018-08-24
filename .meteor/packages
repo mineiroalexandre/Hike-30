@@ -22,7 +22,7 @@ kadira:blaze-layout
 twbs:bootstrap
 meteortoys:allthings
 useraccounts:bootstrap
-accounts-password
+accounts-password@1.5.0
 useraccounts:flow-routing
 softwarerero:accounts-t9n
 sergeyt:typeahead
